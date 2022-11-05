@@ -1,5 +1,5 @@
 # Unity UI Optimization Tool
-A Unity Editor tool that automatically optimizes selected UI game objects including Prefabs.
+A Unity Editor tool that automatically optimizes selected UI game objects (including Prefabs) to save you time.
 
 <p align="center">
   <a>
