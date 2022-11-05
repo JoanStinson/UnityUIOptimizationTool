@@ -46,8 +46,11 @@ over again (very costly).
   
    ### Disabling Raycast Target for non-interactive elements
    For all <b><i>Image</i></b> components that are not part of a <b><i>Button</i></b>, disable the <b><i>Raycast Target</i></b> (basically disable it in all images except for buttons).
-  <br><br>
+   <br><br>
    Each time there is a UI input (click, tap, scroll, etc.) Unity's <i>GraphicsRaycaster</i> iterates over all the <i>Raycast Targets</i> in the scene, so the less we have the more processing we save.
+   <p align="center">
+      <img src="https://github.com/JoanStinson/UnityUIOptimizationTool/blob/main/Images/disable raycast target.PNG">
+   </p>
 </details>
 
 <details>
@@ -55,6 +58,9 @@ over again (very costly).
   
    ### Hiding UI elements by disabling the parent Canvas component
    To avoid the <i>Canvas</i> regeneration, it's good habit to split the UI into different <i>Canvases</i>, and instead of disabling a <i>LayoutGroup</i>, disable an entire <i>Canvas</i>.
+   <p align="center">
+      <img src="https://github.com/JoanStinson/UnityUIOptimizationTool/blob/main/Images/hide canvas.PNG">
+   </p>
 </details>
 
 <details>
@@ -62,8 +68,13 @@ over again (very costly).
   
    ### Avoiding Animator components
    Unity's Animator components are meant for 3D avatar animations primarily. Using it for UI elements causes extra processing.
-   <br><br>
-   Instead, the best approach is to use a custom tweening tool such as DOTween.
+   <p align="center">
+      <img src="https://github.com/JoanStinson/UnityUIOptimizationTool/blob/main/Images/animator.PNG">
+   </p>
+   Instead, the best approach is to use a custom tweening tool such as DOTween.<br><br>
+   <p align="center">
+      <img src="https://github.com/JoanStinson/UnityUIOptimizationTool/blob/main/Images/dotween.PNG">
+   </p>
 </details>
 
 <details>
@@ -71,6 +82,9 @@ over again (very costly).
   
    ### Explicitly defining the event camera for World Space Canvases
    Always set the Event <i>Camera</i> in a <i>World Space Canvas</i> as if there is no <i>Camera</i> assigned, it will call <i>FindObjectWithTag("Main Camera")</i> on every single frame! ☠️
+   <p align="center">
+      <img src="https://github.com/JoanStinson/UnityUIOptimizationTool/blob/main/Images/world space canvas.PNG">
+   </p>
 </details>
 
 <details>
@@ -78,8 +92,16 @@ over again (very costly).
   
    ### Don't use alpha to hide UI elements
    Even though the <i>Image</i>'s color property is set to <i>alpha</i> 0, it will still cause a <i>draw call</i>.
-   <br><br>
+   <p align="center">
+      <img src="https://github.com/JoanStinson/UnityUIOptimizationTool/blob/main/Images/alpha.PNG">
+   </p>
    Instead, disable the <i>game object</i> itself, or set the <i>alpha</i> of a <i>Canvas Group</i> to 0. This will prevent any <i>draw calls</i> from this object and its childs (0 <i>draw calls</i>).
+   <p align="center">
+      <img src="https://github.com/JoanStinson/UnityUIOptimizationTool/blob/main/Images/splash.PNG">
+   </p>
+   <p align="center">
+      <img src="https://github.com/JoanStinson/UnityUIOptimizationTool/blob/main/Images/canvas group.PNG">
+   </p>
 </details>
 
 <details>
@@ -87,6 +109,9 @@ over again (very costly).
   
    ### Make sure to use a RectMask2D
    Like this, any element that is not inside the <i>Scroll Rect</i>, will not be drawn saving plenty of <i>draw calls</i>.
+   <p align="center">
+      <img src="https://github.com/JoanStinson/UnityUIOptimizationTool/blob/main/Images/rectmask.PNG">
+   </p>
 </details>
 
 <details>
@@ -96,6 +121,9 @@ over again (very costly).
    <i>Pixel Perfect</i> makes UI elements appear sharper, but since in a <i>Scroll Rect</i> there's going to be movement, we won't notice it and we'll save a lot of processing.
    <br><br>
    The <i>Scroll Rect</i> should be on a separate <i>Canvas</i> with this setting off and other UI elements appearing in the same screen, would be in another <i>Canvas</i> with this setting on.
+   <p align="center">
+      <img src="https://github.com/JoanStinson/UnityUIOptimizationTool/blob/main/Images/pixel perfect.PNG">
+   </p>
 </details>
 
 <details>
@@ -112,6 +140,9 @@ over again (very costly).
    For a <i>Button</i> that's going to be interactable full-screen, for the <i>Button's Target Graphic</i>, don't use an <i>Image</i> that fills the whole screen and has a <i>color alpha</i> set to 0 (as transparency breaks batching processes).
    <br><br>
    Instead, for the <i>Button's Target Graphic</i>, use a <i>Text</i> with no <i>Font</i> or <i>Text</i> defined.
+   <p align="center">
+      <img src="https://github.com/JoanStinson/UnityUIOptimizationTool/blob/main/Images/empty ui text for all screen.PNG">
+   </p>
 </details>
 
 <details>
