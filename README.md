@@ -130,7 +130,7 @@ over again (very costly).
 
 ## 🧰 Tool Supported Techniques
 ✅ <b>Disabling Raycast Target for non-interactive elements</b><br>
-✅ <b>Avoiding Animator components (displays log warning in the Console)</b><br>
+✅ <b>Avoiding Animator components</b><br>
 ✅ <b>Make sure to use a RectMask2D</b><br>
 ✅ <b>Disable Pixel Perfect for ScrollRects</b>
     
