@@ -95,7 +95,7 @@ over again (very costly).
    <p align="center">
       <img src="https://github.com/JoanStinson/UnityUIOptimizationTool/blob/main/Images/alpha.PNG">
    </p>
-   Instead, disable the <i>game object</i> itself, or set the <i>alpha</i> of a <i>Canvas Group</i> to 0. This will prevent any <i>draw calls</i> from this object and its childs (0 <i>draw calls</i>).
+   Instead, disable the <i>game object</i> itself, or set the <i>alpha</i> of a <i>Canvas Group</i> to 0. This will prevent any <i>draw calls</i> from this object and its childs (0 <i>draw calls</i>).<br><br>
    <p align="center">
       <img src="https://github.com/JoanStinson/UnityUIOptimizationTool/blob/main/Images/splash.PNG">
    </p>
