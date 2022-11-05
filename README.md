@@ -22,6 +22,10 @@ A Unity Editor tool that automatically optimizes selected UI game objects (inclu
   </a>
 </p>
 
+<p align="center">
+  <img src="https://github.com/JoanStinson/UnityUIOptimizationTool/blob/main/Images/preview.gif">
+</p>
+
 ## 🖥️ How It Works
 For starters, import the package located in the [Releases](https://github.com/JoanStinson/UnityUIOptimizationTool/releases) section into your project.
 
