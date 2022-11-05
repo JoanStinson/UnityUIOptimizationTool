@@ -83,19 +83,26 @@ over again (very costly).
 </details>
 
 <details>
-   <summary><b>🛠️ Optimizing ScrollRects</b></summary>
- 
-   ### Optimizing ScrollRects
-   * <summary><b>Make sure to use a RectMask2D</b></summary>
-     Like this, any element that is not inside the <i>Scroll Rect</i>, will not be drawn saving plenty of <i>draw calls</i>.
-     <br><br>
-   * <summary><b>Disable Pixel Perfect for ScrollRects</b></summary>
-     <i>Pixel Perfect</i> makes UI elements appear sharper, but since in a <i>Scroll Rect</i> there's going to be movement, we won't notice it and we'll save a lot of processing.
-     <br><br>
-     The <i>Scroll Rect</i> should be on a separate <i>Canvas</i> with this setting off and other UI elements appearing in the same screen, would be in another <i>Canvas</i> with this setting on.
-     <br><br>
-   * <summary><b>Manually stop ScrollRect motion</b></summary>
-     We can use <i>ScrollRect.StopMovement()</i> to stop the motion once the <i>ScrollRect.velocity</i> is below a certain threshold to reduce regeneration frequency.
+   <summary><b>🛠️ Make sure to use a RectMask2D</b></summary>
+  
+   ### Make sure to use a RectMask2D
+   Like this, any element that is not inside the <i>Scroll Rect</i>, will not be drawn saving plenty of <i>draw calls</i>.
+</details>
+
+<details>
+   <summary><b>🛠️ Disable Pixel Perfect for ScrollRects</b></summary>
+  
+   ### Disable Pixel Perfect for ScrollRects
+   <i>Pixel Perfect</i> makes UI elements appear sharper, but since in a <i>Scroll Rect</i> there's going to be movement, we won't notice it and we'll save a lot of processing.
+   <br><br>
+   The <i>Scroll Rect</i> should be on a separate <i>Canvas</i> with this setting off and other UI elements appearing in the same screen, would be in another <i>Canvas</i> with this setting on.
+</details>
+
+<details>
+   <summary><b>🛠️ Manually stop ScrollRect motion</b></summary>
+  
+   ### Manually stop ScrollRect motion
+   We can use <i>ScrollRect.StopMovement()</i> to stop the motion once the <i>ScrollRect.velocity</i> is below a certain threshold to reduce regeneration frequency.
 </details>
 
 <details>
@@ -120,6 +127,12 @@ over again (very costly).
    ### Avoid nested Layout Groups
    Wherever possible, try to reduce the amount of nested <i>Layout Groups</i> as it's very costly performance wise.
 </details>
+
+## 🧰 Tool Supported Techniques
+✅ <b>Disabling Raycast Target for non-interactive elements</b><br>
+✅ <b>Avoiding Animator components (displays log warning in the Console)</b><br>
+✅ <b>Make sure to use a RectMask2D</b><br>
+✅ <b>Disable Pixel Perfect for ScrollRects</b>
     
 ## 📚 Bibliography
 * [Unite Europe 2017 - Squeezing Unity: Tips for raising performance](https://youtu.be/_wxitgdx-UI?t=1426)
