@@ -1,6 +1,5 @@
 # Unity UI Optimization Tool
-This is a compilation of useful tips and tricks we can use in order to optimize the performance of our games' UI.
-Here is the list of tips and tricks and here is the list of supported features by the tool:
+A Unity Editor tool that automatically optimizes selected UI game objects including Prefabs.
 
 <p align="center">
   <a>
