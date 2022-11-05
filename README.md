@@ -22,6 +22,15 @@ A Unity Editor tool that automatically optimizes selected UI game objects (inclu
   </a>
 </p>
 
+## 🖥️ How It Works
+For starters, import the package located in the [Releases](https://github.com/JoanStinson/UnityUIOptimizationTool/releases) section into your project.
+
+Now then, inside the Unity Editor, select <i>game objects</i> anywhere: in the scene's <i>Hierarchy</i>, in the <i>Project</i> window or in <i>Prefab Edit Mode</i>.
+
+Next, go to <i>Tools > JGM > Optimize Selected UI GameObjects</i> and press it.
+
+It will automatically optimize the selected <i>game objects</i> (including <i>Prefabs</i>) with the supported techniques.
+
 ## 🛠️ Unity UI Optimization Techniques
 <details>
    <summary><b>🛠️ Using more Canvases</b></summary>
