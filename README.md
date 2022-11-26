@@ -192,9 +192,9 @@ over again (very costly).
 </details>
 
 <details>
-   <summary><b>🛠️ Prevent Batch Breaks where possible</b></summary>
+   <summary><b>🛠️ Take order into account to prevent Batch Breaks</b></summary>
   
-   ### Prevent Batch Breaks where possible
+   ### Take order into account to prevent Batch Breaks
    Order in UI hierarchies matters. If you have in a hierarchy this order: SpriteA1, SpriteB1, SpriteA2, SpriteB2, SpriteA3, SpriteB3 (meaning 'A' Sprites are from a specific Sprite Atlas and 'B' Sprite are from another one) it will issue 6 <i>draw calls</i> because the batches are breaking as all Sprites from 1 Atlas are not consecutively in line. To prevent this Batch Break, order them as in: SpriteA1, SpriteA2, SpriteA3, SpriteB1, SpriteB2, SpriteB3. As a result, this will only issue 2 <i>draw calls</i>.
 </details>
 
