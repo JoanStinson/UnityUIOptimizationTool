@@ -161,16 +161,37 @@ over again (very costly).
 </details>
 
 <details>
-   <summary><b>🛠️ Reduce game objects inside Prefabs</b></summary>
+   <summary><b>🛠️ Reduce Game Objects inside Prefabs</b></summary>
   
-   ### Reduce game objects inside Prefabs
+   ### Reduce Game Objects inside Prefabs
    Wherever possible, try to reduce the number of <i>game objects</i> inside of a <i>Prefab</i>, maybe in some occasions it's possible to merge 3 <i>game objects</i> with <i>Images</i> into 1 single <i>game object</i> with 1 <i>Image</i>.
 </details>
 
 <details>
    <summary><b>🛠️ Avoid Layout Groups when possible</b></summary>
   
-   ### Avoid nested Layout Groups
+   ### Avoid Layout Groups when possible
+   Whenever possible, try to avoid using <i>Layout Groups</i>, specially nested <i>Layout Groups</i>, as it's very costly performance wise.
+</details>
+
+<details>
+   <summary><b>🛠️ Adjust texture compression formats</b></summary>
+  
+   ### Adjust texture compression formats
+   Whenever possible, try to avoid using <i>Layout Groups</i>, specially nested <i>Layout Groups</i>, as it's very costly performance wise.
+</details>
+
+<details>
+   <summary><b>🛠️ Use Sprite Atlases always</b></summary>
+  
+   ### Use Sprite Atlases always
+   Use [Sprite Atlases](https://docs.unity3d.com/Manual/class-SpriteAtlas.html) for grouping single Sprites into one big texture to reduce the number of <i>draw calls</i>.
+</details>
+
+<details>
+   <summary><b>🛠️ Prevent Batch Breaks where possible</b></summary>
+  
+   ### Prevent Batch Breaks where possible
    Whenever possible, try to avoid using <i>Layout Groups</i>, specially nested <i>Layout Groups</i>, as it's very costly performance wise.
 </details>
 
