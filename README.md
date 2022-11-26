@@ -186,6 +186,9 @@ over again (very costly).
   
    ### Use Sprite Atlases always
    Use [Sprite Atlases](https://docs.unity3d.com/Manual/class-SpriteAtlas.html) for grouping single Sprites into one big texture to reduce the number of <i>draw calls</i>.
+   <p align="center">
+      <img src="https://github.com/JoanStinson/UnityUIOptimizationTool/blob/main/Images/sprite atlas.PNG">
+   </p>
 </details>
 
 <details>
