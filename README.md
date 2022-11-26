@@ -178,7 +178,7 @@ over again (very costly).
    <summary><b>🛠️ Adjust texture compression formats</b></summary>
   
    ### Adjust texture compression formats
-   Whenever possible, try to avoid using <i>Layout Groups</i>, specially nested <i>Layout Groups</i>, as it's very costly performance wise.
+   Always adjust texture compression formats for your UI Sprite assets, to reduce memory footprint. Available compression types can be found [here](https://docs.unity3d.com/Manual/class-TextureImporterOverride.html).
 </details>
 
 <details>
@@ -195,7 +195,7 @@ over again (very costly).
    <summary><b>🛠️ Prevent Batch Breaks where possible</b></summary>
   
    ### Prevent Batch Breaks where possible
-   Whenever possible, try to avoid using <i>Layout Groups</i>, specially nested <i>Layout Groups</i>, as it's very costly performance wise.
+   Order in UI hierarchies matters. If you have in a hierarchy this order: SpriteA1, SpriteB1, SpriteA2, SpriteB2, SpriteA3, SpriteB3 (meaning 'A' Sprites are from a specific Sprite Atlas and 'B' Sprite are from another one) it will issue 6 <i>draw calls</i> because the batches are breaking as all Sprites from 1 Atlas are not consecutively in line. To prevent this Batch Break, order them as in: SpriteA1, SpriteA2, SpriteA3, SpriteB1, SpriteB2, SpriteB3. As a result, this will only issue 2 <i>draw calls</i>.
 </details>
 
 ## 🧰 Tool Supported Techniques
@@ -205,6 +205,7 @@ over again (very costly).
 ✅ <b>Disable Pixel Perfect for ScrollRects</b>
     
 ## 📚 Bibliography
+* [Unite '17 Seoul - Tips and Tricks for Optimising Unity UI](https://www.youtube.com/watch?v=eH-PdFKgctE)
 * [Unite Europe 2017 - Squeezing Unity: Tips for Raising Performance](https://youtu.be/_wxitgdx-UI?t=1426)
 * [Unity Game Optimization](https://www.amazon.com/Unity-Game-Optimization-Enhance-performance/dp/1838556516)
 * [Optimizing Unity UI](https://learn.unity.com/tutorial/optimizing-unity-ui)
