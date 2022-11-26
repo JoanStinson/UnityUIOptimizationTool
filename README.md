@@ -168,10 +168,10 @@ over again (very costly).
 </details>
 
 <details>
-   <summary><b>🛠️ Avoid nested Layout Groups</b></summary>
+   <summary><b>🛠️ Avoid Layout Groups when possible</b></summary>
   
    ### Avoid nested Layout Groups
-   Wherever possible, try to reduce the amount of nested <i>Layout Groups</i> as it's very costly performance wise.
+   Whenever possible, try to avoid using <i>Layout Groups</i>, specially nested <i>Layout Groups</i>, as it's very costly performance wise.
 </details>
 
 ## 🧰 Tool Supported Techniques
@@ -181,6 +181,7 @@ over again (very costly).
 ✅ <b>Disable Pixel Perfect for ScrollRects</b>
     
 ## 📚 Bibliography
-* [Unite Europe 2017 - Squeezing Unity: Tips for raising performance](https://youtu.be/_wxitgdx-UI?t=1426)
-* [Unity Game Optimization: Enhance and extend the performance of all aspects of your Unity games](https://www.amazon.com/Unity-Game-Optimization-Enhance-performance/dp/1838556516)
-* [Unity Learn - Optimizing Unity UI](https://learn.unity.com/tutorial/optimizing-unity-ui)
+* [Unite Europe 2017 - Squeezing Unity: Tips for Raising Performance](https://youtu.be/_wxitgdx-UI?t=1426)
+* [Unity Game Optimization](https://www.amazon.com/Unity-Game-Optimization-Enhance-performance/dp/1838556516)
+* [Optimizing Unity UI](https://learn.unity.com/tutorial/optimizing-unity-ui)
+* [Optimization Tips for Unity UI](https://unity.com/how-to/unity-ui-optimization-tips#avoid-expensive-ui-elements)
